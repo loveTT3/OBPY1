@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "E:\\python38\\python.exe",
+    // "python.autoComplete.addBrackets": true,
+    // "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf"
+}
