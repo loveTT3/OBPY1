@@ -8,3 +8,4 @@
 
 print(locals())
 print(globals())
+# 11
