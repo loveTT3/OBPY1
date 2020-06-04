@@ -9,3 +9,8 @@
 print(locals())
 print(globals())
 # 11
+#上传的
+
+age1 = 10
+age2 = 20
+age3 = 39
