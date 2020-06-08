@@ -37,3 +37,15 @@ qq = sys.path.append(a2)
 from aabb import *
 print(age1,age2)
 # print(age3)  # 这行代码报错 因为 __all__列表里面 没有age3
+
+
+
+'''
+相对导入
+
+
+
+'''
+
+
+

@@ -11,5 +11,8 @@ def timee():
 
 # 当前脚本执行  会立马执行可执行语句
 # 以导入模块执行时，不执行可执行语句
-if __name__ == '__main__':
+def main():
     timee()
+
+if __name__ == '__main__':
+    main()

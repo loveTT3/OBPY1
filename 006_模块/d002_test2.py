@@ -15,11 +15,13 @@ print(os.path.dirname(__file__)+r'/a01')
 
 
 
+
 '''
-aa在另一个文件夹
+aa在另一个文件夹  直接导入会报错
+
 获取当前文件父路径  加上文件夹名字
 添加到sys.path中
 '''
 a = os.path.dirname(__file__)+r'/a01'
 sys.path.append(a)
-import aa
+import aabb
