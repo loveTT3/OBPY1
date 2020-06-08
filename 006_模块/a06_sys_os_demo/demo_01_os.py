@@ -25,10 +25,23 @@ import shutil
 
 # 和路径相关的操作  os.path
 print('父目录：',os.path.dirname(r'd:/PYPYPY/OBPY1/006_模块/a06_sys_os_demo/demo_01_os.py'))  
-print('文件名：',os.path.basename(r'd:/PYPYPY/OBPY1/006_模块/a06_sys_os_demo/demo_01_os.py'))  
-
+print('文件名：',os.path.basename(r'd:/PYPYPY/OBPY1/006_模块/\
+                                a06_sys_os_demo/demo_01_os.py'))  
 print('路径中的路径和文件名切分开： ',os.path.split(r'd:/PYPYPY/OBPY1/006_模块/a06_s\
                                                     ys_os_demo/demo_01_os.py'))  # 返回元组
+
+# 拼接路径
+print('拼接的路径：',os.path.join('d:\\','aaa','bbb','c.txt'))
+
+# 返回path规范化的绝对路径
+print(os.path.abspath(r'a\b\c'))
+print(os.path.abspath(r'd:\\c\v'))
+
+# 判断
+path = '路径'
+os.path.isabs(path)     # 如果path是绝对路径，返回True
+os.path.isfile(path)    # 如果path是一个存在的文件，返回True。否则返回False
+os.path.isdir(path)     # 如果path是一个存在的目录，则返回True。否则返回False
 
 
 
