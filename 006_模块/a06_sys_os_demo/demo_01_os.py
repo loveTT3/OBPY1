@@ -37,7 +37,7 @@ print('拼接的路径：',os.path.join('d:\\','aaa','bbb','c.txt'))
 print(os.path.abspath(r'a\b\c'))
 print(os.path.abspath(r'd:\\c\v'))
 
-# 判断
+# 判断（加）判断 
 path = '路径'
 os.path.isabs(path)     # 如果path是绝对路径，返回True
 os.path.isfile(path)    # 如果path是一个存在的文件，返回True。否则返回False
