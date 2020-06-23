@@ -39,14 +39,14 @@ lst1 = json.loads(res)
 print(type(lst1))
 print('反序列化：',lst1)
 
-# with open(r'D:\PYPYPY\OBPY1\006_模块\a07_json_demo\a.txt',mode='w',encoding='utf-8') as ff:
+# with open('a.txt',mode='w',encoding='utf-8') as ff:
 #     json.dump([1,2,3],ff)
 #     res = json.load(ff)
 #     print(type(res))
 #     print(res)
 
 
-# 总结
+# 总结py
 '''
 json.dumps(obj)
 json.dump(obj,f)
