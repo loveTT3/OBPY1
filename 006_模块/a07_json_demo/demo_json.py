@@ -64,3 +64,6 @@ with open('json.txt',mode='w',encoding='utf-8') as f:
 with open('json.txt',mode='r',encoding='utf-8') as f:
     for i in f:
         print(json.loads(i.strip()))
+
+
+d = {'aa':'sd'}
