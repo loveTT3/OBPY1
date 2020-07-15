@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>菜&nbsp;单一</dt>
+        <dd>今天看表格标签</dd>
+        <dt>菜&nbsp;单二</dt>
+        <dd>二级带单</dd>
+    </dl>
+
+    <!-- 表格标签 -->
+    <table border="1" cellpadding='33'>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>爱好</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>悟空</td>
+                <td>788</td>
+                <td>桃子</td>
+            </tr>
+            <tr>
+                <td>悟空</td>
+                <td>788</td>
+                <td>桃子桃子桃子桃子</td>
+            </tr>
+            <tr>
+                <td>悟空</td>
+                <td>788</td>
+                <td>桃子</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="http://127.0.0.1:8001" method="POST">
+        <label for="username" >用户名</label>
+        <input type="text" name="username" value="请输入用户名" id="username" readonly><br>
+        <label >
+            密&nbsp;码<input type="password" name="pwd" value="请输入密码" id=""><br>
+        </label>
+        <!-- 单选 -->
+        <input type="radio" name="sex" value="1" id="">男
+        <input type="radio" name="sex" value="2" checked='checked' id="">女
+        <!-- 多选 -->
+        <input type="checkbox" name="hobby" value="a" id="" >吃
+        <input type="checkbox" name="hobby" value="b" id="" checked>睡
+        <input type="checkbox" name="hobby" value="b" id="" checked>拉屎
+        <input type="submit" name="" id="" value="注册">
+        <!-- 下拉选择 没有选择框 则传文本-->
+        <select name="city" id="">
+            <option value="1">北京</option>
+            <option value="2">深圳</option>
+            <option value="3" selected>上海</option>
+        </select>
+
+        <textarea name="" id="" cols="30" rows="13" maxlength='10'></textarea>
+    </form>
+
+   
+</body>
+</html>
+
+<!-- 特殊字符：
+    &nbsp;  空格 -->
+
+    <!-- table 表格标签:
+    　　属性:
+        border: 表格边框.
+        cellpadding: 内边距 （内边框和内容的距离）
+        cellspacing: 外边距.（内外边框的距离）
+        width: 像素 百分比.（最好通过css来设置长宽）
+        rowspan: 单元格竖跨多少行
+        colspan: 单元格横跨多少列（即合并单元格） -->
+
+    input标签：
+        

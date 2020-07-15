@@ -12,7 +12,7 @@ while 1:
 
     conn.send(b'Http/1.1  200 ok \r\n\r\n')
 
-    with open(r'E:\PYXUEXI\OBPY1\020_前端\a01_web项目是什么\test.html',mode='rb') as f:
+    with open(r'E:\PYXUEXI\OBPY1\020_前端\a02_html基础\a03_form_input.html',mode='rb') as f:
         date = f.read()
     conn.send(date)
     # conn.send(b'<h1>hello world</h1>')
