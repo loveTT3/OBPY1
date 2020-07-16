@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 元素选择器 */
+        div{
+            color: royalblue;
+        }
+        /* id选择器 */
+        #jerry{
+            color: red;;
+        }
+        /* 类选择器 */
+        div.c1{
+            color: purple;
+        }
+        /* c1{
+            color: purple;
+        } */
+
+        /* 通用选择器 */
+        /* *{
+            color: pink;
+        } */
+    </style>
+</head>
+<body>
+    <div>第一种选择器</div>
+    <div id="jerry" class="c1">第二种选择器 jerry</div>
+    <div class="c1">类选择器1</div>
+    <div class="c1">类选择器2</div>
+    <!-- 类选择器做限制，所以p标签未被修饰 -->
+    <p class="c1">你是个屁</p>
+
+</body>
+</html>
+
+
+

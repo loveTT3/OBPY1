@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+/* 后代选择器 */
+/* 找到div下的所有a标签 */
+    div a{ 
+        color: peru;
+    }
+/* 儿子选择器 */
+/* div下的a标签 */
+    div>a{
+        color: purple;
+    }
+/* 毗邻选择器 */
+/* 只找div标签的下一个同级标签 */
+    div+a{
+        color: plum;
+    }
+/* 弟弟选择器 */
+/* 找到的是同级的后面的所有兄弟标签 */
+    div~a{
+        color: orchid;;
+    }
+    </style>
+</head>
+<body>
+
+<div>
+    <a href="">百度</a>
+    <div>
+        <a href="">京东</a>
+    </div>
+    <p>
+        <a href="">耳机</a>
+    </p>
+</div>    
+<a href="小米"></a>
+</body>
+</html>
