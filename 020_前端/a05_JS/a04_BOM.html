@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 界面（记住）
+        // 获取当前url（记住）
+        var a = window.location.href
+        console.log(a)
+
+        // 跳转新页面（记住）
+        // location.href = 'http://ww.baidu.com';
+        // 刷新页面（记住）
+        // location.reload();
+
+        // 弹窗（了解内容）
+        // alert('这是一个弹窗呢');
+        // confirm('可以选择确定取消的弹出框')
+        // prompt('这个是提示框','提示框的默认内容')
+
+        // 计时相关（记住，计时器是异步的）
+        // settimeout() 一段时间之后做某些事情 里面写个方法和时间ms
+        setTimeout(function () {
+            alert()
+        }, 3000);
+        setTimeout(() => {
+            alert('嘤嘤嘤')
+        }, 5000);
+        // setInterval() 每隔一段时间执行一次代码
+        // setInterval(() => {
+        //     console.log(111)
+        // }, 1000);
+
+        // 清除
+        // 在指定时间之后执行一次相应函数
+        var timer = setTimeout(function () { alert(123); }, 3000)
+        // 取消setTimeout设置
+        // clearTimeout(timer);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 伪元素选择器 */
+        /* 首字母设置 */
+        div::first-letter{
+            color: springgreen;
+            font-size: 33px;
+        }
+        /* 标签内部前面加入内容 */
+        p::before{
+            content: '不可选中';
+            color: tomato;
+            font-size: 33px;
+        }
+        /* 标签内部后面加入内容 */
+        p::after{
+            content: '???';
+            color: teal;
+            font-size: 44px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        帅哥东亮
+    </div>
+    <p>
+        嘤嘤嘤
+    </p>
+</body>
+</html>

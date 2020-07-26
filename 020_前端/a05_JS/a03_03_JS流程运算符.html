@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 运算符
+        var a = 1
+        var aa = '1'
+        console.log(a == aa)    // true
+        console.log(a === aa)   //  false
+
+        // 流程控制
+        // if -else if - else
+        var a = 10
+        if (a > 5) {
+            console.log('a > 5')
+        } else if (a < 5) {
+            console, log('a < 5')
+        } else {
+            console.log('a = 5')
+        }
+
+        // switch
+        // switch中的case子句通常都会加break语句，否则程序会继续执行后续case中的语句。
+        var day = new Date().getDay(); //示例化一个今天的日期对象，getDay()是获取天数的编号，0表示星期日
+        switch (day) {  //这里day这个参数必须是一个值或者是一个能够得到一个值的算式才行，这个值和后面写的case后面的值逐个比较，满足其中一个就执行case对应的下面的语句，然后break，如果没有加break，还会继续往下判断
+            case 6: //如果day是0
+                console.log("Sunday"); //执行它
+                break; //然后break跳出
+            case 1:
+                console.log("Monday");
+                break;
+            default:  //如果没有任何满足条件的，就执行它
+                console.log("...")
+        }
+
+        // for
+        // 循环数组
+        var l2 = ['a', 'b', 'v', 'l']
+        for (var i in l2) {
+            console.log(i, l2[i])
+        }
+        for (var i = 0; i < l2.length; i++) {
+            console.log(i, l2[i])
+        }
+
+        //循环自定义对象：
+        var d = { aa: 'xxx', bb: 'ss', name: '小明' };
+        for (var i in d) {
+            console.log(i, d[i])
+        }
+
+        // while
+        var i = 0;
+        while (i < 10) {
+            console.log(i);
+            i++;
+        }
+
+        // 三元运算符
+        var a = 1;
+        var b = 2;
+        var c = a > b ? a : b
+    </script>
+</body>
+
+</html>

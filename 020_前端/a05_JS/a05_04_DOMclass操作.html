@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .c1 {
+            width: 200px;
+            height: 200px;
+            background-color: blanchedalmond;
+            margin: 33px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1" id='d1'>
+        大
+    </div>
+    <div class='c2' id='d2'>
+        大二
+    </div>
+
+    <script>
+        // 类的操作
+        var a = document.getElementById('d2')
+        a.classList.add('c1') //添加类
+        setTimeout(() => {
+            console.log(a.classList.contains('c1')) // 存在返回true  不存在返回false
+            a.classList.remove('c1') // 删除类
+            a.classList.toggle('c1')
+        }, 2000);
+        setTimeout(() => {
+            a.classList.toggle('c1') // 存在就删除，否则添加，toggle的意思是切换，有了就给你删除，如果没有就给你加一个
+        }, 1000);
+
+        // 执行css操作
+        var b = document.getElementById('d1')
+        // 对于没有中横线的CSS属性一般直接使用style.属性名即可
+        b.style.backgroundColor = 'red';
+        b.style.margin = '55px'; // 距外边框位置
+        b.style.width = '100px';
+        b.style.left = '333px';
+        // obj.style.position =  // 定位
+        // 对含有中横线的CSS属性，将中横线后面的第一个字母换成大写即可
+        b.style.marginTop=''
+        b.style.borderLeftWidth=''
+        b.style.zIndex=''
+        b.style.fontFamily=''
+    </script>
+</body>
+
+</html>

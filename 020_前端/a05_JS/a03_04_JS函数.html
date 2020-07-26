@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 普通函数
+        function a(a, b) {
+            return a + b
+        }
+        console.log(a(1, 2))
+
+        // 匿名函数
+        var sum = function (a, b) {
+            return a + b;
+        }
+        console.log(sum(1, 2))
+
+            // 立即执行函数
+            (function (a, b) {
+                return a + b;
+            })(1, 2);
+
+        // 
+        function add(a, b) {
+            console.log(a + b);
+            console.log(arguments.length) //获取传入的参数的个数，arguments就是指的你传入的所有的实参，放在一个数组里面，这个arguments.length是统计这个数组的元素的个数。
+        }
+        add(1, 2)
+    </script>
+</body>
+
+</html>

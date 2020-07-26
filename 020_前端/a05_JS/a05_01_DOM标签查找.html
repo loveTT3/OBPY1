@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .c1{
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="c1" id="d1">
+        我去你家玩耍可以吗
+        <div>
+            第一个    子标签
+        </div>
+        <div id="qw">
+            子标签
+            <div>
+                孙子标签
+            </div>
+            <div>
+                孙子标签2
+            </div>
+        </div>
+        <div>
+            子标签2
+        </div>
+    </div>
+    <div class="c2" id="d2">
+        待到山花烂漫时
+    </div>
+    <button class="b1" id='b1'>
+        按钮
+    </button>
+
+    <!-- DOM  -->
+    <script>
+// 直接查找
+        var a = document.getElementById('d1')
+        console.log(a.innerText)
+        // a.innerText = '这是换了内容的内容'
+        console.log(a)
+        var b = document.getElementsByClassName('b1') // 返回数组
+        var b = document.getElementsByTagName('div')  // 返回数组
+// 间接查找
+        var c = document.getElementById('qw')
+        console.log(c.parentElement)  // 父节点
+        console.log(c.children)  // 所有字标签  返回数组
+        console.log(c.firstElementChild)  // 第一个子标签
+        console.log(c.lastElementChild)  // 最后一个子标签
+        console.log(c.nextElementSibling)  // 下一个兄弟标签
+        console.log(c.previousElementSibling)  // 上一个兄弟标签
+
+
+    </script>
+</body>
+</html>

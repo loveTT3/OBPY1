@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        nimabi 
+        <div id="d2">
+            擦及时
+        </div>
+    </div>
+    <script>
+// 创建a标签 
+    var a = document.createElement('a')
+    a.innerText = '报读';
+    a.href = 'http://wwww.baidu.com'
+    console.log(a)
+
+    var b = document.createElement('span')
+    b.innerText = '傻逼';
+    console.log(b)
+
+    var bb = document.getElementById('d1')
+    var cc = document.getElementById('d2')
+// 添加节点 
+    // 通过appendchild将创建的标签e添加到指定标签里面，位置最后面
+    // bb.appendChild(a)
+    // 把增加的节点放到某个节点的前边
+    bb.insertBefore(b,cc)
+    
+// 删除节点
+    // 获得要删除的元素，通过父元素调用该方法删除。
+        // bb.removeChild(a)
+
+// 替换节点
+    // 然后找到这个父标签里面的要被替换的子标签，然后用新的标签将该子标签替换掉   
+    bb.replaceChild(a,b)
+    </script>
+</body>
+</html>

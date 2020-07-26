@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JavaScript中的所有事物都是对象：字符串、数字、数组、日期，等等。
+        在JavaScript中，对象是拥有属性和方法的数据。
+　　var s1 = "abc"和var s2 = new String("abc")的区别：
+            typeof s1 是 string
+            typeof s2 是 Object 
+    -->
+    <script>
+        // 对象
+        // undefined - 如果变量是 Undefined 类型的
+        // boolean - 如果变量是 Boolean 类型的
+        // number - 如果变量是 Number 类型的
+        // string - 如果变量是 String 类型的
+        // object - 如果变量是一种引用类型或 Null 类型的，
+        // typeof null返回为object,因为特殊值null被认为是一个空的对象引用。
+        var a = '123';  //string 
+        var b = new String('222');  //object
+        console.log(typeof(a),typeof(b));  
+
+        // 自定义对象
+        var aa = {'name':'alex','age':21};
+        console.log(aa['name']);
+        console.log(aa['age']);
+        // 遍历
+        for(i in aa){
+            console.log(i,aa[i])
+        }
+    </script>
+    <img src="https://images2015.cnblogs.com/blog/315302/201702/315302-20170205172450401-644571910.png" alt="类型">
+</body>
+</html>

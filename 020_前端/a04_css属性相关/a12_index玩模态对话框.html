@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .shadow{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 50;
+    }
+    .mode{
+        position: fixed;
+        height: 100px;
+        width: 200px;
+        background-color: rosybrown;
+        z-index: 100;
+        /* 居中 */
+        left: 50%;
+        top: 50%;
+        margin-left:-100px;
+        margin-top: -50px;
+    }
+    </style>
+</head>
+<body>
+   <div>
+       <h1>index模态对话框</h1>
+   </div> 
+   <div class="mode">
+
+   </div>
+   <div class="shadow">
+    
+   </div>
+</body>
+</html>

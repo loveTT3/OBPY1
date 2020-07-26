@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .c1{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .c2{
+            background-color:blue;
+            width: 100px;
+            height: 100px;
+            /* 相对定位，相对自己原来的位置，以左上角为基准  保留原来的位置*/
+            /* position: relative;
+            left: 100px;
+            bottom: 100px; */
+            /* right: 0px;
+            top: 0px; */
+
+            /* 绝对定位  不保留自己原来的位置，所以c3占到了c2的位置 
+            以父级或者组先机标签position为relative为基准 如果一直找不到 则按照body来找*/
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+        .c3{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 100px;
+        }
+        .c4{
+            border: 1px red solid;
+            width: 80px;
+            height: 20px;
+            background: pink;
+            position:fixed;
+            top: 300px;
+            text-align: center;
+            
+        }
+        .cc{
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    <div class="c1">
+    </div>
+    <div class="c2"></div>
+    <div class="c3">
+        <div class="c2"></div>
+    </div>
+    <div class="cc">
+    </div>
+    <!-- 触发锚点 -->
+    <a href="#top" class="c4">回到顶部</a>
+</body>
+</html>

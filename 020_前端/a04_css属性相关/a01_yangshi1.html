@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: rgba(211,122,222,0.3);
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+        /* css的回退机制，找到第一个可以识别的属性 */
+        #ccc{
+            font-family: '楷体''宋体';
+            /* 浏览器字体大小默认16px */
+            font-size: 22px;
+            /* 字重  bold加粗 */
+            font-weight: bold;
+            color: #ff33ff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="c1">
+        我是div标签
+    </div>
+    <span>
+        我是span标签
+    </span>
+    <p id="ccc">
+        嘤嘤嘤
+    </p>
+</body>
+</html>
+
+
+高度宽度设置：
+    只有块级标签能够设置高度宽度   
+    内敛标签不能设置高度宽度，他的宽度由自己内容决定
+    a标签的字体颜色设置必须选中a标签，不能继承
+字体属性：
+
+

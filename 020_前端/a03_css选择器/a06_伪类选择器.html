@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 未访问的链接 */
+    a:link{
+        color: orangered;
+    }
+    /* a标签访问过之后 */
+    a:visited{
+        color:yellow;
+    }
+    /* 悬停上  所有标签都可以用*/
+    a:hover{
+        color: black;
+    }
+    /* 点上去不松开展示的颜色 */
+    a:active{
+        color: black;
+    }
+
+    /* div标签鼠标放上去变色 */
+    div{
+        width: 222px;
+        height: 333px;
+        background-color: thistle;
+    }
+    div:hover{
+        background-color: seagreen;
+    }
+    /* 输入框焦点聚集变色 */
+    input:focus{
+        background-color: sandybrown;
+    }
+    </style>
+</head>
+
+<body>
+    
+    <a href="http://www.baidu.com">百度</a>
+    <div></div>
+    名字<input type="text">
+</body>
+</html>
