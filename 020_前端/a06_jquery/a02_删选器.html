@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 筛选器 -->
+    <ul>
+        <li>悟空</li>
+        <li id="d1">八戒</li>
+        <li id="d2">沙僧</li>
+        <li >是的撒</li>
+    </ul>
+    <div>
+        <div></div>
+    </div>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        var a = $('li:first')   // 第一个
+        var a1 = $('li:last')  // 最后一个
+        var a2 = $('li:eq(1)')  // 索引等于index的那个元素
+        var a3 = $('li:even')  // 匹配所有索引值为偶数的元素，从 0 开始计数
+        var a4 = $('li:odd');  // 匹配所有索引值为奇数的元素，从 0 开始计数
+        var a5 = $('li:gt(2)');  // 匹配所有大于给定索引值的元素
+        var a6 = $('li:lt(2)')  // 匹配所有小于给定索引值的元素 
+        var a6 = $('li::not(元素选择器)')  // 移除所有满足not条件的标签
+        var a6 = $('li::has(元素选择器)')  // 选取所有包含一个或多个标签在其内的标签(指的是从后代元素找)
+
+// $("div:has(h1)")// 找到所有后代中有h1标签的div标签，意思是首先找到所有div标签，把这些div标签的后代中有h1的div标签筛选出来
+// $("div:has(.c1)")// 找到所有后代中有c1样式类（类属性class='c1'）的div标签
+// $("li:not(.c1)")// 找到所有不包含c1样式类的li标签
+// $("li:not(:has(a))")// 找到所有后代中不含a标签的li标签
+// console.log(a1)
+
+// 属性选择器
+// [attribute]
+// [attribute=value]// 属性等于
+// [attribute!=value]// 属性不等于
+// 示例,多用于input标签
+// <input type="text">
+// <input type="password">
+// <input type="checkbox">
+// $("input[type='checkbox']");// 取到checkbox类型的input标签
+// $("input[type!='text']");// 取到类型不是text的input标签
+    </script>
+</body>
+</html>

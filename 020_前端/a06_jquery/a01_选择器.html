@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1" class="c1">
+        嘤嘤嘤
+    </div>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        // jquery对象
+        var a = $('#d1')
+        // jquery对象和DOM对象的转换
+        console.log(a[0])
+        var b = document.getElementById('d1')
+        console.log($(b))
+        // 基本选择器
+        a.text('dsasdh')
+        var a = $('#d1')
+        var a1 = $('.c1')
+        // a1.text('。选择')
+        var a2 = $('div')
+        a2.text('标签名选择')
+
+// $("x y");// x的所有后代y（子子孙孙）
+// $("x > y");// x的所有儿子y（儿子）
+// $("x + y")// 找到所有紧挨在x后面的y
+// $("x ~ y")// x之后所有的兄弟y
+    </script>
+</body>
+
+</html>
