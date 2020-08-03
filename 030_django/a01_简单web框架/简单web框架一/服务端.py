@@ -14,8 +14,16 @@ while 1:
     conn.send(b'HTTP/1.1 200 ok\r\n\r\n')
 
 
-    with open(r'OBPY1\030_django\a01_简单web框架\简单web框架一\test.html', mode='rb') as f:
-        data = f.read()
+    if path == '/':
+        with open(r'OBPY1\030_django\a01_简单web框架\简单web框架一\test.html', mode='rb') as f:
+            data = f.read()
+    elif path == '/test.css':
+        with open(r'OBPY1\030_django\a01_简单web框架\简单web框架一\test.css', mode='rb') as f:
+            data = f.read()
+    elif path == '/test.js':
+        with open(r'OBPY1\030_django\a01_简单web框架\简单web框架一\test.js', mode='rb') as f:
+            data = f.read()
+    
     # print(data)
     conn.send(data)
     conn.close()
