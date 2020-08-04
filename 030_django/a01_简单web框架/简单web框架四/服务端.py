@@ -74,7 +74,7 @@ def application(environ, start_response):
 
     return [ret]
 
-#和咱们学的socketserver那个模块很像啊
+#和socketserver那个模块很像啊
 httpd = make_server('127.0.0.1', 8080, application)
 print('Serving HTTP on port 8080...')
 # 开始监听HTTP请求:
