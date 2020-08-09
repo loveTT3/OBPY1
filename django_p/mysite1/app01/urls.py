@@ -11,7 +11,9 @@ from app01 import views,urls
   #  将文件夹名字templates 加入这里可以直接引用文件名
 urlpatterns = [
     # app01的首页
-    url(r'^$',views.app01_base)
+    url(r'^$',views.app01_base),
+    url(r'^yyy',views.app01_base)
+
 
 
 

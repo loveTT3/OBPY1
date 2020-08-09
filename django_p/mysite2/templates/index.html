@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>231</div>
+    <div>{{ name }}</div>
+    <div>{{ age }}</div>
+    <div>{{ l1 }}</div>
+    <div>{{ d1 }}</div>
+    <div>{{ l1.2 }}</div>
+    <div>{{ dog }}</div>
+    <div>{{ dog.eat }}</div>
+
+    <!-- 过滤器 -->
+    <!-- 返回列表或者字符串长度 -->
+    <div>{{ l1|length }}</div>
+    <!-- 为空或者false  返回默认值 -->
+    <div>{{ xx|default:'啥也没有' }}</div>
+    <!-- 按文件大小展示 -->
+    <div>{{ age|filesizeformat }}</div>
+    <!-- 字符串切片 -->
+    <div>{{ name|slice:'0:3' }}</div>
+    <!-- 时间 -->
+    <div>{{ now|date:'Y-m-d H:i:s' }} </div>
+    <!-- 字符串截断 -->
+    <div>{{ name|truncatechars:8 }} </div>
+    <!-- 单词截断 -->
+    <div>{{ words|truncatewords:3 }} </div>
+    <!-- 字符串去除 -->
+    <div>{{ words|cut:' ' }} </div>
+    <!-- 字符串拼接 -->
+    <div>{{ name|join:'lalal ' }} </div>
+    <!-- 将字符串识别成标签 -->
+    <div>{{ tag|safe }} </div>
+
+    
+</body>
+</html>

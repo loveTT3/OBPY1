@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* .yyy{
+                margin: 0;
+                padding: 0;
+            } */
+            .dingbu{
+                width: 100%;
+                height: 40px;
+                background-color: red;
+            }
+            /* 清除浮动 */
+            .clear{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .zuo{
+                width: 10%;
+                height: 900px;
+                background-color: grey;
+                float: left;
+            }
+            .you{
+                width: 90%;
+                height: 900px;
+                float:right;
+            }
+            {% block css %}
+                
+            {% endblock css %}
+        </style>
+</head>
+<body>
+<div class="dingbu">
+    <a href="">链接1</a>
+    <a href="">链接2</a>
+    <a href="">链接13</a>
+    <input type="text" name="" id=""><button>搜索</button>
+</div>
+
+<div class="clear">
+    <div class="zuo">
+            <ul>
+                <li> <a href="/jicheng1/">菜单一</a> </li><br>
+                <li> <a href="/jicheng2/">菜单二</a> </li><br>
+                <li> <a href="/jicheng3/">菜单三</a> </li><br>
+            </ul>
+        </div>
+        <div class="you">
+            {% block content %}
+            模板内容
+            {% block content1 %}
+            {% endblock content1 %}
+            {% endblock content %}
+        </div>
+</div>
+    {% block js %}
+            模板内容
+            {% endblock js %}
+        
+</body>
+</html>

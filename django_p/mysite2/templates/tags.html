@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tags</title>
+</head>
+<body>
+    {% comment %} tags {% endcomment %}
+    <div>{{ l1 }}</div>
+    <div>{{ dic1 }}</div>
+
+    {% comment %} 反向for循环 {% endcomment %}
+    {% for i in l1 reversed  %}
+    <ul>
+        <li>{{ i }}</li>
+    </ul>
+    {% endfor %}
+
+
+    {% comment %}   forloop.counter            当前循环的索引值(从1开始)，forloop是循环器，通过点来使用功能
+                    forloop.counter0           当前循环的索引值（从0开始）
+                    forloop.revcounter         当前循环的倒序索引值（从1开始）
+                    forloop.revcounter0        当前循环的倒序索引值（从0开始）
+                    forloop.first              当前循环是不是第一次循环（布尔值）
+                    forloop.last               当前循环是不是最后一次循环（布尔值）
+                    forloop.parentloop         本层循环的外层循环的对象，再通过上面的几个属性来显示外层循环的计数等
+     {% endcomment %}
+
+    {% for k,v in dic1.items %}
+        {% if forloop.last %}
+            {% for aaa in v %}
+                <p> {{ aaa }} </p>   
+            {% endfor %}
+        {% else %}       
+        <ol>
+            {{ k }} -- {{ v }}
+        </ol>
+        {% endif %}
+
+    {% endfor %}
+
+
+    {% comment %} for ... empty {% endcomment %}
+    {% comment %} 没找到数据时，给一些默认的数据  dic2这个字典不存在 {% endcomment %}
+    {% for k1,v1 in dic2.items %}
+        <div>{{ k1 }} -- {{ v1 }}</div>
+    {% empty %}
+        <div>没有 数据</div>
+    {% endfor %}
+
+
+    {% comment %} with {% endcomment %}
+    {% comment %} 
+        使用一个简单地名字缓存一个复杂的变量，多用于给一个复杂的变量起别名，
+        当你需要使用一个“昂贵的”方法（比如访问数据库）很多次的时候是非常有用的 
+    {% endcomment %}
+    {% for k1,v1 in dic1.items %}
+        {% comment %} {% with forloop.counter0 as len  %} {% endcomment %}
+        {% with len=forloop.counter0 %}
+        <div>{{ len }}</div>
+        {% endwith %}
+    {% endfor %}
+
+    {# ... #}
+
+    {% comment %} # 在页面的form表单里面（注意是在form表单里面）任何位置写上{% csrf_token %} 就不用了注释setting里的 # 'django.middleware.csrf.CsrfViewMiddleware'了 {% endcomment %}
+    {% csrf_token %}
+    <form action="" methed='post'>
+
+    </form>
+
+</body>
+</html>
