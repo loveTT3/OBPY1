@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入css -->
+    <!-- 第一种方法   别名 -->
+    <!-- <link rel="stylesheet" href="/static/css1.css"> -->
+    <!-- 第二种方法  顶部{% load static %} -->
+    <link rel="stylesheet" href="{% static 'css1.css' %}">
+</head>
+<body>
+    
+    <div class="c1">嘤嘤嘤</div>
+
+    {% load tag1 %}
+    <div> {{ s1|xx }} </div>
+    <!-- {% load  %} -->
+    <div>{{ s1|xxxx:'嘤嘤嘤' }}</div>
+
+
+    {% load tag1 %}
+    {% tagg1 2 %}
+    {% tagg2 %}
+    {% tagg3 'qq' 'ww' 'ee' %}
+</body>
+</html>

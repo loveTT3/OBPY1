@@ -37,3 +37,12 @@ def jicheng2(request):
     return render(request,'m_jicheng2.html')
 def jicheng3(request):
     return render(request,'m_jicheng3.html')
+
+# 用于静态文件 和 自定义标签
+def test(request):
+    s1 = '孙悟空'
+    return render(request,'test.html',{'s1':s1})
+
+# 用于测试组件
+def zujian(request):
+    return render(request,'zujian2.html')
