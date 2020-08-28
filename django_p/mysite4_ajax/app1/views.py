@@ -11,7 +11,7 @@ def login(request):
         password = request.POST.get('password')
         print(name,password)
         if  name == '' or password == '':
-            return JsonResponse(1,safe=False)
+            return JsonResponse(1,safe=False) #safe字段为false，可以将任何类型转换为json  值为true则只能穿字典，否则TypeError报错
         elif int(name) == 123 and int(password) == 123:
             # print(111)
             # return render(request,'base.html')

@@ -9,9 +9,9 @@ import random
 print(round(random.random(),2))
 print(random.random())
 
-#获取[2,22]之间的整数
+#随机获取[2,22]之间的一个整数
 print(random.randint(2,22))
-#获取[1,10)之间的奇数
+#随机获取[1,10)之间的一个奇数
 print('1-10之间的奇数: ',random.randrange(1,10,2))
 
 
@@ -29,7 +29,7 @@ l1 = list(range(10))
 print('随机生成一个列表：',random.sample(l1,3))
 
 # 随机选择一个返回
-print('随机选取一个返回：',random.choice(1,['a','b','c'],'23'))
+# print('随机选取一个返回：',random.choice(1,['a','b','c'],'23'))
 
 #
 
