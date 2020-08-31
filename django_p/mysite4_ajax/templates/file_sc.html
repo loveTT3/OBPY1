@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 基于form表单上传图片 -->
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        上传图片 <input type="file" name="p1" id="">
+        <input type="submit" name="" id="">
+    </form>
+    
+    <!-- 基于ajax上传图片 -->
+    ajax上传<input type="file" id='pp1'>
+    <input type="submit" name="p2" id="b1">
+
+    <script src="/static/jquery-3.5.1.js"></script>
+    <script>
+        $("#b1").click(function(){
+            var formdata1 = new FormData();
+            formdata1.append("csrfmiddlewaretoken",$("[name='csrfmiddlewaretoken']").val());
+            formdata1.append('p_name',$("#pp1")[0].files[0]);
+            console.log($("#pp1")[0].files[0]);
+            $.ajax({
+                url:'',
+                type:'post',
+                data:formdata1,
+                processData:false,
+                contentType:false,
+
+                success:function(data){
+                    console.log(data)
+                }
+            })
+        })
+    </script>
+
+    <!-- <script src=""></script> -->
+</body>
+</html>

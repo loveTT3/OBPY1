@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^login/', views.login),
     url(r'^ajax_add/', views.ajax_add),
     url(r'^base/', views.base),
+    url(r'^file_sc/', views.file_sc,name='file_sc'),
 # 
 ]

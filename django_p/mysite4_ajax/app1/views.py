@@ -1,5 +1,7 @@
 from django.shortcuts import render,HttpResponse
 from django.http import JsonResponse
+import os
+from mysite4_ajax import settings    
 # Create your views here.
 
 def login(request):
@@ -31,3 +33,23 @@ def ajax_add(request):
     ret = i1+i2
     # print(ret)
     return JsonResponse(ret, safe=False)
+
+# 上传图片
+def file_sc(request):
+    method = request.method
+    # print('方法',method)
+    if method == 'GET':
+        return render(request,'file_sc.html')
+    else:
+        # print(request.POST)
+        # file_obj = request.FILES.get('p1')
+        file_obj = request.FILES.get('p_name')
+        
+        print('名字是',file_obj,type(file_obj))
+        
+        path = os.path.join(settings.BASE_DIR,'static\img',file_obj.name)
+        print(path)
+        with open(path,'wb') as f:
+            for data in file_obj:
+                f.write(data)      
+    return JsonResponse(3,safe=False)
