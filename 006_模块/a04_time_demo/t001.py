@@ -36,7 +36,8 @@ print('------------------分割线---------------------')
 # time.asctime(结构化时间) 如果不传参数，直接返回当前时间的格式化串
 print(time.asctime(time.localtime(123489000)))
 print(time.asctime())
-
+#时间戳 --> %a %d %d %H:%M:%S %Y串
+#time.ctime(时间戳)  如果不传参数，直接返回当前时间的格式化串
 print(time.ctime())
 print(time.ctime(1233444))
 

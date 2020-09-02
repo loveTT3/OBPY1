@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from OBPY1.django_p.mysite5_cose.app1 import views
+from app1 import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', views.index,name='index'),
+    url(r'^home/', views.home,name='home'),
 ]
