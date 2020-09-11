@@ -11,7 +11,7 @@ def index_coo(f):
             return redirect('index')
     return inner
 
-
+# 登录
 def index(request):
     method = request.method
     if method == 'GET':
@@ -24,6 +24,7 @@ def index(request):
             ret = redirect('home')
             # 增加cookies
             ret.set_cookie('k1','v1')
+            # ret.set_signed_cookie('k1','v1',salt='加密盐', max_age=10,)# cookie过期时间，默认两周，单位秒，None代表cookie保留到关闭浏览器
             return ret
         else:
             return redirect('index')
@@ -37,6 +38,11 @@ def index(request):
 #         # return render(request,'index.html')
 #         return redirect('index')
 
+# 注销，清楚cookie
+def logout(request):
+    ret = render(request,'index.html')
+    ret.delete_cookie('k1')
+    return ret
 
 @index_coo
 def home(request):
