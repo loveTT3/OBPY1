@@ -7,6 +7,7 @@ def index_coo(f):
         coo = request.COOKIES.get('k1')
         if coo == 'v1':
             ret = f(request,*args,**kwargs)
+            return ret
         else:
             return redirect('index')
     return inner
@@ -47,3 +48,32 @@ def logout(request):
 @index_coo
 def home(request):
     return render(request,'home.html')
+
+
+
+# session
+def index2(request):
+    method = request.method
+    if method == 'GET':
+        return render(request,'index2_session.html')
+    elif method == 'POST':
+        name = request.POST.get('username')
+        password = request.POST.get('password')
+        if name == '123' and password == '123':
+            request.session["name"] = '123'
+            return redirect('home2')
+        else:
+            return render(request,'index2_session.html')
+
+def home2(request):
+    cook = request.session.get('name')
+    if cook == '123':
+        return render(request,'home2_session.html')
+    else:
+        return redirect('index2')
+
+def logout2(request):
+    # 清除session
+    request.session.flush()
+    # request.session.delete()
+    return redirect('index2')

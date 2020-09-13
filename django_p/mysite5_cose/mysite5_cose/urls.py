@@ -21,4 +21,9 @@ urlpatterns = [
     url(r'^index/', views.index,name='index'),
     url(r'^home/', views.home,name='home'),
     url(r'^logout/', views.logout,name='logout'),
+
+# session
+    url(r'^index2/', views.index2,name='index2'),
+    url(r'^home2/', views.home2,name='home2'),
+    url(r'^logout2/', views.logout2,name='logout2'),
 ]
