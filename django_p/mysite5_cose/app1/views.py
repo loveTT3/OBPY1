@@ -20,7 +20,7 @@ def index(request):
     elif method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        print(username,'=====',password)
+        # print(username,'=====',password)
         if username == '123' and password == '123':
             ret = redirect('home')
             # 增加cookies
@@ -45,7 +45,7 @@ def logout(request):
     ret.delete_cookie('k1')
     return ret
 
-@index_coo
+# @index_coo
 def home(request):
     return render(request,'home.html')
 
