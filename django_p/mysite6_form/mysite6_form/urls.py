@@ -21,5 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^test/', views.test1),
     url(r'^/', views.test1),
+    url(r'^fy/', views.fy),
     # url(r'^admin/', admin.site.urls),
+
 ]

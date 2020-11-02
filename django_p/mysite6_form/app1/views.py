@@ -139,3 +139,8 @@ class RegForm(forms.Form):
         
         )  #必须指定type，不然不能渲染成选择时间的input框
 
+
+
+def fy(request):
+    list1 = [1,2,3,45,432,6,43,2,4,3,2,2,3,3,2,4,3,2,4,2,2,3,2,]
+    return render(request,'fenye.html',locals())
